@@ -1,0 +1,100 @@
+@charset "utf-8";
+/*
+#funcForm\:gakkiT01\:0\:dispArea .fontB {
+    color: red;
+}
+
+#funcForm\:gakkiT01\:0\:dispArea div span {
+    color: green
+}
+
+#funcForm\:gakkiT01\:0\:dispArea .jugyo-normal .signClass {
+    color: blue;
+}
+
+body {
+    background: gray
+}
+
+.fontB {
+    font-size: 14px;
+}*/
+
+.delete_info {
+    display: none;
+}
+
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left.btnL.existenceText {
+    display: none
+}
+
+.inner {
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.inner button:first-of-type {
+    /*width: 9em;*/
+    margin-left: 6em;
+    margin-right: 15px;
+
+}
+
+.innerA {
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.innerA button:first-of-type {
+    /*width: 9em;*/
+    margin-left: 12px;
+    margin-right: 20px;
+
+}
+
+
+
+/*
+.inner button:nth-of-type(2) {
+    width: 7em;
+}
+*/
+
+.inner2 {
+    margin-left: 12px;
+    width: 16em;
+}
+
+.inner3 {
+    margin-left: 3px;
+    /*width: 16.5em;*/
+}
+
+.ui-radiobutton.ui-widget {
+    display: none;
+}
+
+.ui-selectoneradio.ui-widget {
+    display: none;
+}
+
+
+tr:nth-of-type(6) {
+    display: none;
+}tr:nth-of-type(7) {
+    display: none;
+}tr:nth-of-type(8) {
+    display: none;
+}
+
+tr:nth-of-type(14) {
+    display: none;
+}tr:nth-of-type(15) {
+    display: none;
+}tr:nth-of-type(16) {
+    display: none;
+}

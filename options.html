@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UNIPA Extension 設定</title>
+</head>
+
+<body>
+    <p><label>UNIPAログイン情報:</label></p>
+    <p>
+        <input type="text" id="uido_id" name="uido_id" size="7" placeholder="01kc999">
+        <input type="password" id="uido_pass" name="uido_pass" size="35" placeholder="共通パスワード"><br>
+
+        <input type="radio" name="gakki " id="rdo_gakki1" value="gakki"> 前期
+        <input type="radio" name="gakki " id="rdo_gakki2" value="gakki"> 後期<br>
+        <!--<input type="text" id="kamokuar2y" name="ka" size="50" height="200" placeholder="科目名カンマ区切り"><br>-->
+        <textarea id="kamokuary" name="example1" cols="52" rows="3" placeholder="科目名カンマ区切り"></textarea><br>
+
+
+        <button id="confirmbtn">確認</button>
+        <label id="resultlb"></label>
+        <br><br>
+    </p>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/options.js"></script>
+</body>
+
+</html>

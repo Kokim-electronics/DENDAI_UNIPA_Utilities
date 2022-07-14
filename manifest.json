@@ -1,0 +1,56 @@
+﻿{
+    "name": "DENDAI_UNIPA_Utilities",
+    "description": "DENDAI-UNIPA : 自動ログイン，時間割表スタイル変更",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "homepage_url": "https://github.com/Kokim-electronics/DENDAI_UNIPA_Utilities",
+    "permissions": [
+        "storage"
+    ],
+    "options_ui": {
+        "page": "options.html"
+    },
+    "icons": {
+        "16": "images/16.png",
+        "48": "images/48.png",
+        "128": "images/128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_title": "UNIPA ログイン",
+        "default_icon": {
+            "128": "images/128.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "exclude_matches": [
+                "https://portal.sa.dendai.ac.jp/uprx/up/pk/pky001/Pky00101.xhtml"
+            ],
+            "matches": [
+                "https://portal.sa.dendai.ac.jp/*"
+            ],
+            "js": [
+                "js/jquery-3.5.1.min.js",
+                "js/autologin.js",
+                "js/tt.js",
+                "js/bbs.js"
+            ],
+            "css": [
+                "css/tt.css"
+            ]
+        },
+        {
+            "matches": [
+                "https://portal.sa.dendai.ac.jp/uprx/up/pk/pky001/Pky00101.xhtml"
+            ],
+            "js": [
+                "js/jquery-3.5.1.min.js",
+                "js/autologin.js",
+                "js/bbs2.js"
+            ]
+        }
+    ]
+}
