@@ -5,7 +5,12 @@
     "manifest_version": 3,
     "homepage_url": "https://github.com/Kokim-electronics/DENDAI_UNIPA_Utilities",
     "permissions": [
-        "storage"
+        "storage",
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback"
+    ],
+    "host_permissions": [
+        "*://portal.sa.dendai.ac.jp//"
     ],
     "options_ui": {
         "page": "options.html"
@@ -52,5 +57,14 @@
                 "js/bbs2.js"
             ]
         }
-    ]
+    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ruleset_1",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    }
 }
