@@ -192,7 +192,6 @@ element.id = "btmain2";
 afel.appendChild(element);// boxes.after(element);
 //========================
 
-//========================
 if (textEnd.endsWith("シラバス検索")) {
     element = document.createElement('button');
     element.type = 'button';
@@ -201,7 +200,11 @@ if (textEnd.endsWith("シラバス検索")) {
     element.innerText = "表示"
     element.onclick = btn35;
     afel.appendChild(element);
-} else if (textEnd.endsWith("時間割表")) {
+}
+if (textEnd.endsWith("時間割表") || textEnd.endsWith("シラバス検索") || textEnd.endsWith("成績照会")) {
+    boxes.after(afel);
+}
+if (textEnd.endsWith("時間割表")) {
     element = document.createElement('button');
     element.type = 'button';
     element.id = "btmain3";
@@ -209,10 +212,6 @@ if (textEnd.endsWith("シラバス検索")) {
     element.innerText = "表示"
     element.onclick = btn33;
     boxes.after(element);
-}
-
-if (textEnd.endsWith("時間割表") || textEnd.endsWith("シラバス検索") || textEnd.endsWith("成績照会")) {
-    boxes.after(afel);
 }
 
 
