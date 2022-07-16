@@ -17,7 +17,7 @@
 
 参考 : <br>[カスタムの Chrome アプリと拡張機能を作成して公開する - Chrome Enterprise and Education ヘルプ](https://support.google.com/chrome/a/answer/2714278?hl=ja)
 
-1. `Releases - Assets - Source code (zip)` もしくは `Code - Download ZIP`からDL
+1. `Releases - Assets`からDL
 2. `chrome://extensions/`へアクセス
 
 3. デベロッパーモードオン
@@ -35,4 +35,4 @@
 - ブラウザ右上のパズルピースアイコンから本拡張機能をピン止めするとアクセスが楽に。
 - サポートは[#DENDAI_UNIPA_Utilities](https://twitter.com/search?q=%23DENDAI_UNIPA_Utilities)にて
 
-最終更新日:2022/07/16 14:15
+最終更新日:2022/07/16 14:33
