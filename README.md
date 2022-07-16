@@ -35,4 +35,4 @@
 - ブラウザ右上のパズルピースアイコンから本拡張機能をピン止めするとアクセスが楽に。
 - サポートは[#DENDAI_UNIPA_Utilities](https://twitter.com/search?q=%23DENDAI_UNIPA_Utilities)にて
 
-更新日:2022/07/16 14:15
+最終更新日:2022/07/16 14:15
