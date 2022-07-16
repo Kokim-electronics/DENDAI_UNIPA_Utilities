@@ -22,7 +22,7 @@
 
 3. デベロッパーモードオン
 
-4. `DENDAI_UNIPA_Utilities-vx.x.x`フォルダをD&D
+4. `C:\Program Files\Google\Chrome`あたりにでも解凍し`DENDAI_UNIPA_Utilities-vx.x.x`フォルダをD&D
 
 5. 設定画面にて学籍番号と共通パスワードを設定
 6. 前期後期を設定
