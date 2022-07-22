@@ -1,4 +1,4 @@
-## DENDAI_UNIPA_Utilities
+## DENDAI_UNIPA_Utilities-v1.1.1
 
 ### Ⅰ.機能
 1. 自動ログイン
@@ -37,4 +37,4 @@
 ### Ⅳ.参考資料
 BearOffice/WebClass-Extension: ウェブクラス(WebClass)の利便性を向上できるChrome拡張機能． https://github.com/BearOffice/WebClass-Extension 
 
-更新日:2022/07/22 11:20
+更新日:2022/07/22 21:30

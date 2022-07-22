@@ -53,6 +53,7 @@ function main(array, le) {
 
 
     //===================================================
+    //非表示
     for (let index = 0; index < fontB.length; index++) {
         for (let index2 = 0; index2 < /*array.*/le/*ngth*/; index2++) {
             if (fontB[index].textContent.startsWith(array[index2])) {
@@ -60,14 +61,6 @@ function main(array, le) {
             }
         }
     }
-    /*
-    let delete_set = document.getElementsByClassName('delete_set');
-    Array.prototype.forEach.call(delete_set, function (element) {
-        if (array != "") {
-            element.parentNode.classList.add("delete_info");
-        }
-
-    });*/
     //===================================================
 
 }
@@ -77,8 +70,6 @@ function main2() {
     var jugyo_info = document.getElementsByClassName('jugyo-info');
     var infodiv = document.querySelectorAll(".jugyo-info.jugyo-normal");
     var bre
-
-    //var array = ["東京電機大学で学ぶ", "トリムスポーツ", "口語英語", "総合英語I (2年生以上)", "微分積分学および演習", "線形代数学", "基礎物理学", "物理実験", "基礎化学", "化学・生物実験", "ワークショップ", "コンピュータ", "電子システム工学入門", "フレッシュマンセミナー", "科学技術と現代社会", "自然科学概論", "電気回路基礎", "プログラミング基礎", "ホームエレクトロニクス", "教職入門", "教育心理学", "日本語", "日本事情", "電磁気学II （再履修クラス・3年生以上）", "総合英語II (2年生以上)", "総合英語III"];
 
     for (let index = 0; index < infodiv.length; index++) {
         infodiv[index].id = "jugyo-id" + index;
