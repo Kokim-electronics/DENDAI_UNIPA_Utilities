@@ -1,7 +1,7 @@
 ﻿{
     "name": "DENDAI_UNIPA_Utilities",
     "description": "DENDAI-UNIPA : 自動ログイン，時間割表スタイル変更",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "manifest_version": 3,
     "homepage_url": "https://github.com/Kokim-electronics/DENDAI_UNIPA_Utilities",
     "permissions": [
