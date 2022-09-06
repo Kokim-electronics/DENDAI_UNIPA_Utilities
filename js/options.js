@@ -14,7 +14,9 @@ function saveurl() {
             value_gakki = n;
         }
     }
-    console.log($("#kamokuary").val().length);
+
+    //console.log($("#kamokuary").val().length);
+
     var arr_kamoku
     if ($("#kamokuary").val().length == 0) {
         arr_kamoku = ""
@@ -22,10 +24,7 @@ function saveurl() {
         arr_kamoku = $("#kamokuary").val().split(',');
     }
 
-
-    //var value_gakki2 = $('#rdo_gakki2').checked
     $("#resultlb").text('設定が成功しました．');
-    //$("#resultlb").text(value_gakki);
     chrome.storage.local.set({ uido_id: value_id, uido_pass: value_pass, gakki: value_gakki, kamoku: arr_kamoku });
 }
 

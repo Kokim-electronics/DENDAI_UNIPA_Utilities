@@ -1,27 +1,29 @@
-﻿function main(array, le) {
+function main(array, le, textEnd) {
     var fontB = document.getElementsByClassName('fontB');
     var infodiv = document.querySelectorAll(".jugyo-info.jugyo-normal");
-    var bre
+    var bre;
+    var index;
+    var num;
 
-    for (let index = 0; index < infodiv.length; index++) {
+    for (index = 0; index < infodiv.length; index++) {
         // 番号づけ 
         infodiv[index].id = "jugyo-id" + index;
 
         // クローン
         var details_element = document.createElement('details');
-        let clone = document.querySelector(`#jugyo-id` + index).cloneNode(true);
-        let fontB_element = clone;
+        var clone = document.querySelector(`#jugyo-id` + index).cloneNode(true);
+        var fontB_element = clone;
 
         // 学生時間割と授業時間割の場合分け
         var times;
-        if (document.querySelectorAll("span[class=ui-menuitem-text]")[36].textContent.endsWith("学生時間割表")) {
+        if (textEnd.endsWith("学生時間割表")) {
             times = 6;
         } else {
             times = 5;
         }
 
         // 子要素をコピー
-        for (let _index = 0; _index < fontB_element.children.length + times; _index += 1) {
+        for (var num = 0; num < fontB_element.children.length + times; num += 1) {
             if (fontB_element.children[0] === undefined) {
                 bre = true;
                 break;
@@ -47,8 +49,8 @@
         fontB_element = document.createElement('summary');
         fontB_element.append(clone.textContent);
 
-        for (let _index = 0; _index < clone.className.split(' ').length; _index++) {
-            fontB_element.classList.add(clone.className.split(' ')[_index]);
+        for (var num = 0; num < clone.className.split(' ').length; num++) {
+            fontB_element.classList.add(clone.className.split(' ')[num]);
         }
 
         var fontBdiv2 = document.querySelector('#fontB-id' + index);
@@ -58,8 +60,8 @@
 
     //===================================================
     //非表示
-    for (let index = 0; index < fontB.length; index++) {
-        for (let index2 = 0; index2 < /*array.*/le/*ngth*/; index2++) {
+    for (var index = 0; index < fontB.length; index++) {
+        for (var index2 = 0; index2 < /*array.*/le/*ngth*/; index2++) {
             if (fontB[index].textContent.startsWith(array[index2])) {
                 fontB[index].parentNode.classList.add('delete_info');
             }
@@ -69,25 +71,32 @@
 
 }
 
-function main2() {
+function main2(textEnd) {
     var fontB = document.getElementsByClassName('fontB');
     var infodiv = document.querySelectorAll(".jugyo-info.jugyo-normal");
-    var bre
+    var bre;
+    var index;
+    var num;
 
-    for (let index = 0; index < infodiv.length; index++) {
+    for (index = 0; index < infodiv.length; index++) {
+        // 番号づけ
         infodiv[index].id = "jugyo-id" + index;
 
+        // クローン
         var details_element = document.createElement('div');
-        let clone = document.querySelector(`#jugyo-id` + index).cloneNode(true);
-        let fontB_element = clone;
+        var clone = document.querySelector(`#jugyo-id` + index).cloneNode(true);
+        var fontB_element = clone;
 
+        // 学生時間割と授業時間割の場合分け
         var times;
-        if (document.querySelectorAll("span[class=ui-menuitem-text]")[36].textContent.endsWith("学生時間割表")) {
+        if (textEnd.endsWith("学生時間割表")) {
             times = 6;
         } else {
             times = 5;
         }
-        for (let _index = 0; _index < fontB_element.children.length + times; _index += 1) {
+
+        // 子要素をコピー
+        for (var num = 0; num < fontB_element.children.length + times; num += 1) {
             if (fontB_element.children[0] === undefined) {
                 bre = true;
                 break;
@@ -99,9 +108,11 @@ function main2() {
             continue;
         }
 
+        // idとclassを追加
         details_element.classList.add("jugyo-info", "jugyo-normal", "fontB-id" + index);
         details_element.querySelector(`.fontB`).id = "fontB-id" + index;
 
+        // 書き換え
         var infodiv2 = document.getElementById('jugyo-id' + index);
         infodiv2.replaceWith(details_element);
 
@@ -110,30 +121,51 @@ function main2() {
         clone = document.querySelector(`#fontB-id` + index).cloneNode(true);
         fontB_element = document.createElement('div');
         fontB_element.append(clone.textContent);
-        for (let _index = 0; _index < clone.className.split(' ').length; _index++) {
-            fontB_element.classList.add(clone.className.split(' ')[_index]);
+
+        for (var num = 0; num < clone.className.split(' ').length; num++) {
+            fontB_element.classList.add(clone.className.split(' ')[num]);
         }
+
         var fontBdiv2 = document.querySelector('#fontB-id' + index);
         fontBdiv2.replaceWith(fontB_element);
     }
 }
 
-function main3() {
+function main3(textEnd) {
     chrome.storage.local.get(function (item) {
-        array = item.kamoku
+        var array = item.kamoku
         var le = array.length;
-        main(array, le);
+        main(array, le, textEnd);
     });
 }
 
-// 初期実行
-main3();
-tt_kouki();
+function btn33() {
+    document.getElementById('funcForm:search').click();
+    setTimeout(function () { main3(); }, 1500);
 
-//表示ボタン
-//let boxes = document.querySelectorAll("span")[62] // document.querySelectorAll("span")[56,61];
+}
 
-for (let n = 35; n <= 50; n++) {
+function btn35() {
+    if (document.getElementById('funcForm:j_idt172:1').checked) {
+        document.getElementById('funcForm:j_idt266').click();
+    }
+}
+
+// 後期==============================================
+function tt_kouki() {
+    chrome.storage.local.get(
+        ['gakki'],
+        function (value_gakki) {
+            if (textEnd.endsWith("学生時間割表") && value_gakki.gakki == 2) {
+                document.querySelectorAll("div[class=ofAuto]")[0].classList.add("delete_info");
+            }
+        }
+    );
+}
+// 後期==============================================
+
+// 初期実行===========================================
+for (var n = 35; n <= 50; n++) {
     var texthold = document.querySelectorAll("span[class=ui-menuitem-text]")[n];
     if (texthold === undefined) {
         continue;
@@ -146,9 +178,13 @@ for (let n = 35; n <= 50; n++) {
         var textEnd = "";
     }
 }
+main3(textEnd);
+tt_kouki();
+// 初期実行===========================================
 
-let element;
-let afel = document.createElement("div");
+// ボタン作成=========================================
+var element;
+var afel = document.createElement("div");
 
 //========================
 element = document.createElement('button');
@@ -215,31 +251,4 @@ if (textEnd.endsWith("時間割表")) {
     element.innerText = "表示"
     element.onclick = btn33;
     boxes.after(element);
-}
-
-
-function btn33() {
-    document.getElementById('funcForm:search').click();
-    setTimeout(function () { main3(); }, 1500);
-
-}
-
-function btn35() {
-    if (document.getElementById('funcForm:j_idt172:1').checked) {
-        document.getElementById('funcForm:j_idt266').click();
-    }
-}
-
-//===================================================
-//後期
-function tt_kouki() {
-    chrome.storage.local.get(
-        ['gakki'],
-        function (value_gakki) {
-            if (textEnd.endsWith("学生時間割表") && value_gakki.gakki == 2) {
-                console.log("後期")
-                document.querySelectorAll("div[class=ofAuto]")[0].classList.add("delete_info");
-            }
-        }
-    );
 }
