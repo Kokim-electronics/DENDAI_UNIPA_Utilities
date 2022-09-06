@@ -1,4 +1,4 @@
-function main(array, le, textEnd) {
+function jugyo_hidden(array, le) {
     var fontB = document.getElementsByClassName('fontB');
     var infodiv = document.querySelectorAll(".jugyo-info.jugyo-normal");
     var bre;
@@ -71,7 +71,7 @@ function main(array, le, textEnd) {
 
 }
 
-function main2(textEnd) {
+function jugyo_all() {
     var fontB = document.getElementsByClassName('fontB');
     var infodiv = document.querySelectorAll(".jugyo-info.jugyo-normal");
     var bre;
@@ -131,11 +131,11 @@ function main2(textEnd) {
     }
 }
 
-function main3(textEnd) {
+function main3() {
     chrome.storage.local.get(function (item) {
         var array = item.kamoku
         var le = array.length;
-        main(array, le, textEnd);
+        jugyo_hidden(array, le);
     });
 }
 
@@ -178,7 +178,7 @@ for (var n = 35; n <= 50; n++) {
         var textEnd = "";
     }
 }
-main3(textEnd);
+main3();
 tt_kouki();
 // 初期実行===========================================
 
@@ -215,7 +215,7 @@ element = document.createElement('button');
 element.type = 'button';
 if (textEnd.endsWith("時間割表")) {
     element.innerText = "全科目表示"
-    element.onclick = main2;
+    element.onclick = jugyo_all;
 } else if (textEnd.endsWith("シラバス検索")) {
     element.innerText = "ｶﾘｷｭﾗﾑﾂﾘｰ照会";
     element.onclick = function () {
