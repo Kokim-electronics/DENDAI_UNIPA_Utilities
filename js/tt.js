@@ -23,7 +23,7 @@ function jugyo_hidden(array, le) {
         }
 
         // 子要素をコピー
-        for (var num = 0; num < fontB_element.children.length + times; num += 1) {
+        for (num = 0; num < fontB_element.children.length + times; num += 1) {
             if (fontB_element.children[0] === undefined) {
                 bre = true;
                 break;
@@ -49,7 +49,7 @@ function jugyo_hidden(array, le) {
         fontB_element = document.createElement('summary');
         fontB_element.append(clone.textContent);
 
-        for (var num = 0; num < clone.className.split(' ').length; num++) {
+        for (num = 0; num < clone.className.split(' ').length; num++) {
             fontB_element.classList.add(clone.className.split(' ')[num]);
         }
 
@@ -60,7 +60,7 @@ function jugyo_hidden(array, le) {
 
     //===================================================
     //非表示
-    for (var index = 0; index < fontB.length; index++) {
+    for (index = 0; index < fontB.length; index++) {
         for (var index2 = 0; index2 < /*array.*/le/*ngth*/; index2++) {
             if (fontB[index].textContent.startsWith(array[index2])) {
                 fontB[index].parentNode.classList.add('delete_info');
@@ -96,7 +96,7 @@ function jugyo_all() {
         }
 
         // 子要素をコピー
-        for (var num = 0; num < fontB_element.children.length + times; num += 1) {
+        for (num = 0; num < fontB_element.children.length + times; num += 1) {
             if (fontB_element.children[0] === undefined) {
                 bre = true;
                 break;
@@ -122,7 +122,7 @@ function jugyo_all() {
         fontB_element = document.createElement('div');
         fontB_element.append(clone.textContent);
 
-        for (var num = 0; num < clone.className.split(' ').length; num++) {
+        for (num = 0; num < clone.className.split(' ').length; num++) {
             fontB_element.classList.add(clone.className.split(' ')[num]);
         }
 
@@ -158,6 +158,7 @@ function tt_kouki() {
         function (value_gakki) {
             if (textEnd.endsWith("学生時間割表") && value_gakki.gakki == 2) {
                 document.querySelectorAll("div[class=ofAuto]")[0].classList.add("delete_info");
+                document.getElementsByClassName('btnAreaBottom')[0].remove(); // Gitは消す
             }
         }
     );
@@ -165,19 +166,24 @@ function tt_kouki() {
 // 後期==============================================
 
 // 初期実行===========================================
-for (var n = 35; n <= 50; n++) {
+var textEnd;
+var boxes;
+
+for (var n = 25; n <= 100; n++) {
     var texthold = document.querySelectorAll("span[class=ui-menuitem-text]")[n];
     if (texthold === undefined) {
+        textEnd = "";
         continue;
     }
     if (texthold.textContent.endsWith("時間割表") || texthold.textContent.endsWith("シラバス検索") || texthold.textContent.endsWith("成績照会")) {
-        var textEnd = texthold.textContent;
-        var boxes = document.querySelectorAll("span[class=ui-menuitem-text]")[n].parentNode;
+        textEnd = texthold.textContent;
+        boxes = document.querySelectorAll("span[class=ui-menuitem-text]")[n].parentNode;
         break;
     } else {
-        var textEnd = "";
+        textEnd = "";
     }
 }
+
 main3();
 tt_kouki();
 // 初期実行===========================================
