@@ -1,4 +1,4 @@
-## DENDAI_UNIPA_Utilities-v2.1.0
+## DENDAI_UNIPA_Utilities-v2.1.1
 
 ### Ⅰ.機能
 1. 自動ログイン
