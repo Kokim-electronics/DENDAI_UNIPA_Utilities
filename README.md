@@ -8,7 +8,7 @@
 
 参考 : <br>[カスタムの Chrome アプリと拡張機能を作成して公開する - Chrome Enterprise and Education ヘルプ](https://support.google.com/chrome/a/answer/2714278?hl=ja)
 
-1. [Releases](https://github.com/Kokim-electronics/DENDAI_UNIPA_Utilities/releases) - Assets - `DENDAI_UNIPA_Utilities-vx.x.x.zip`からDL
+1. [Releases](https://github.com/Kokim-electronics/DENDAI_UNIPA_Utilities/releases) - Assets - `DENDAI_UNIPA_Utilities-vx.x.x-Light.zip`からDL
 
 3. `chrome://extensions/` or `edge://extensions/`へアクセス、デベロッパーモード(Chrome)・開発者モード(Edge)、オン
 
