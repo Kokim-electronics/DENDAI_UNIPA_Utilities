@@ -1,4 +1,4 @@
-## DENDAI_UNIPA_Utilities-v2.2.0
+## DENDAI_UNIPA_Utilities-v3.0.0
 
 ### Ⅰ.機能
 1. 自動ログイン
@@ -11,6 +11,7 @@
 4. 「シラバス照会」「成績照会」のボタン位置変更
 5. 後期期間中、前期の時間割を非表示に（学生時間割表）
 6. (v2.1.0からの変更点)添付資料のプレビューを廃止
+7. (v2.2.0から長時間・別タブの再ログインを一部実装
 
 ### Ⅱ.導入
 
@@ -31,9 +32,9 @@
 ### Ⅲ.備考
 - **授業アンケートや履修登録時には拡張機能をオフにしてください。**
 - ブラウザ右上のパズルピースアイコンから本拡張機能をピン止めするとアクセスが楽に。
-- サポートは[#DENDAI_UNIPA_Utilities](https://twitter.com/search?q=%23DENDAI_UNIPA_Utilities)にて
+- サポートは[#DENDAI_UNIPA_Utilities](https://twitter.com/search?q=%23DENDAI_UNIPA_Utilities)にてツイート
 
 ### Ⅳ.参考資料
 BearOffice/WebClass-Extension: ウェブクラス(WebClass)の利便性を向上できるChrome拡張機能． https://github.com/BearOffice/WebClass-Extension 
 
-更新日:2022/09/29 0:00
+更新日:2023/4/10 23:30
