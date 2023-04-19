@@ -1,13 +1,11 @@
 ﻿{
     "name": "DENDAI_UNIPA_Utilities-Light",
     "description": "DENDAI-UNIPA : 自動ログイン",
-    "version": "2.1.1",
+    "version": "3.0.1",
     "manifest_version": 3,
     "homepage_url": "https://github.com/Kokim-electronics/DENDAI_UNIPA_Utilities/tree/Light",
     "permissions": [
-        "storage",
-        "declarativeNetRequest",
-        "declarativeNetRequestFeedback"
+        "storage"
     ],
     "host_permissions": [
         "*://portal.sa.dendai.ac.jp//"
@@ -35,7 +33,7 @@
                 "https://portal.sa.dendai.ac.jp/*"
             ],
             "js": [
-                "js/jquery-3.5.1.min.js",
+                "js/jquery-3.6.0.min.js",
                 "js/autologin.js"
             ]
         }
